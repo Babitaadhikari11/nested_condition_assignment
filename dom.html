@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <!-- adding css -->
+    <style>
+        #heading{
+            color: blue;
+            background-color: bisque;
+            font-family:  monospace;        
+        }
+        .heading-one{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>fruits</h2>
+        <ul>
+            <li>mango</li>
+             <li>apple</li> 
+             <li>banana</li>
+              <li>kiwi</li>
+        </ul>
+    </div>
+      
+
+
+    <h1 id="heading">This is example of DOM</h1>
+     <div>This is div container</div>
+    <h3 class="heading-one">We are good</h3>
+    <P class="heading-one">This is Babita</P>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, hic?</p>
+    <button class="mybutton">click me</button>
+    <script>
+      let header=   document.getElementById("heading");
+      console.log(header);
+      let classes = document.getElementsByClassName("heading-one");
+      console.dir(classes); // return HTMLCollection
+
+     let para =  document.getElementsByTagName("p");
+     console.dir(para);
+
+    //  queryselector
+    let element = document.querySelector('p'); // only detec first element
+    console.dir(element);
+
+    let ele =  document.querySelectorAll('p');
+    console.dir(ele);
+
+    // first child
+    console.log(document.body.firstChild)
+
+    let fruit = document.querySelector("div");
+    console.dir(fruit);
+
+     
+    
+      
+     </script>
+</body>
+</html>
