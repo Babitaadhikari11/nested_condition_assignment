@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>vote</p>
+    <input id="voter" placeholder="enter age">
+    <button id="hi" onclick="voteOne()" >click</button>
+    <p id="demo"></p>
+    <script>
+        // function definition
+       function add_Function(){ 
+           var a=10;
+           var b =20;
+           let sum;
+           sum = a+b;
+           document.write("sum is : ",sum);
+       }
+    //    function call
+       add_Function();
+       document.write("<br>");
+    //    function with parameters
+    function my_Function(f_name,l_name){  //passing parameters
+        document.write(f_name+ " " +l_name);
+    }
+    my_Function("Babita","Adhikari"); //passing argument
+ document.write("<br>");
+    // function with return argument
+    function mulThree(a,b,c){
+        return (a*b*c);
+    }
+   var store= mulThree(2,2,2);
+   document.write("the multiplication of three numbes is " ,store );
+
+//    voting function using ternary operator
+function voteOne(){
+    var age=  document.getElementById("voter").value;
+    var b = age>18 ? "you can vote":"too young";
+    var result = document.getElementById("demo").innerHTML = b; 
+}
+
+    </script>
+    
+</body>
+</html>
